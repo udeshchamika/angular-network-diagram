@@ -10,14 +10,14 @@ export class AppComponent  {
 
 getNodes(){	
 var nodes = [
-		    {id: 0, label:'internet', shape: 'image', image:'images/blank.png'},
-        {id: 1, label:'hub', shape: 'image', image:'images/blank.png'},
-        {id: 2, label:'server', shape: 'image', image:'images/blank.png'},
-        {id: 3, label:'pc', shape: 'image', image:'images/blank.png'},
-        {id: 4, label:'printer', shape: 'image', image:'images/blank.png'},
-        {id: 5, label:'router', shape: 'image', image:'images/blank.png'},
-		    {id: 6, label:'pc', shape: 'image', image:'images/blank.png'},
-		    {id: 7, label:'pc', shape: 'image', image:'images/blank.png'},
+		    {id: 0, label:'internet', shape: 'image', image:''},
+        {id: 1, label:'hub', shape: 'image', image:''},
+        {id: 2, label:'server', shape: 'image', image:''},
+        {id: 3, label:'pc', shape: 'image', image:''},
+        {id: 4, label:'printer', shape: 'image', image:''},
+        {id: 5, label:'router', shape: 'image', image:''},
+		    {id: 6, label:'pc', shape: 'image', image:''},
+		    {id: 7, label:'pc', shape: 'image', image:''},
 	]
 	
 	var i = 0;
