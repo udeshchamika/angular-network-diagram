@@ -10,14 +10,20 @@ export class AppComponent  {
 
 getNodes(){	
 var nodes = [
-		    {id: 0, label:'internet', shape: 'image', image:''},
-        {id: 1, label:'hub', shape: 'image', image:''},
-        {id: 2, label:'server', shape: 'image', image:''},
-        {id: 3, label:'pc', shape: 'image', image:''},
-        {id: 4, label:'printer', shape: 'image', image:''},
-        {id: 5, label:'router', shape: 'image', image:''},
-		    {id: 6, label:'pc', shape: 'image', image:''},
-		    {id: 7, label:'pc', shape: 'image', image:''},
+		    {id: 0, level:'0', label:'internet', shape: 'image', image:''},
+        {id: 1, level:'1', label:'hub', shape: 'image', image:''},
+        {id: 2, level:'1', label:'server', shape: 'image', image:''},
+        {id: 3, level:'2', label:'pc', shape: 'image', image:''},
+        {id: 4, level:'4', label:'printer', shape: 'image', image:''},
+        {id: 5, level:'2', label:'router', shape: 'image', image:''},
+		    {id: 6, level:'3', label:'pc', shape: 'image', image:''},
+		    {id: 7, level:'2', label:'hub', shape: 'image', image:''},
+        {id: 8, level:'1', label:'pc', shape: 'image', image:''},
+        {id: 9, level:'2', label:'server', shape: 'image', image:''},
+        {id: 10, level:'3', label:'pc', shape: 'image', image:''},
+        {id: 11, level:'4', label:'pc', shape: 'image', image:''},
+        {id: 12, level:'2', label:'pc', shape: 'image', image:''},
+        {id: 13, level:'4', label:'printer', shape: 'image', image:''},
 	]
 	
 	var i = 0;
@@ -31,14 +37,21 @@ var nodes = [
 
 getEdges(){	
 	var edges = [
-		{from: 0, to: 1},
+		    {from: 0, to: 1},
+        {from: 0, to: 2},
         {from: 1, to: 3},
-        {from: 1, to: 2},
-        {from: 2, to: 4},
+        {from: 2, to: 7},
         {from: 2, to: 5},
-		    {from: 5, to: 3},
-		    {from: 5, to: 6},
-		    {from: 5, to: 7}
+        {from: 5, to: 6},
+        {from: 7, to: 4},
+        {from: 2, to: 8},
+        {from: 5, to: 9},
+        {from: 5, to: 10},
+        {from: 4, to: 8},
+        {from: 9, to: 12},
+        {from: 9, to: 13},
+        {from: 9, to: 11},
+        
 	]
 	
 	return edges;
@@ -95,7 +108,21 @@ ngOnInit(){
         nodes: nodes,
         edges: edges
     };
-    var options = {};
+
+    var options = {
+      edges: {
+        width: 2
+        },
+      
+      layout: {
+        hierarchical: {
+          direction: 'UD',
+          levelSeparation:100,
+          nodeSpacing: 100,
+          sortMethod : 'directed'
+  }
+}
+    };
 	
     // initialize your network!
     var network = new Network(container, data, options);
