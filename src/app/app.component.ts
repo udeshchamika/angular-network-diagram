@@ -24,6 +24,9 @@ var nodes = [
         {id: 11, level:'4', label:'pc', shape: 'image', image:''},
         {id: 12, level:'2', label:'pc', shape: 'image', image:''},
         {id: 13, level:'4', label:'printer', shape: 'image', image:''},
+        {id: 14, level:'5', label:'hub', shape: 'image', image:''},
+        {id: 15, level:'1', label:'pc', shape: 'image', image:''},
+        {id: 16, level:'5', label:'pc', shape: 'image', image:''},
 	]
 	
 	var i = 0;
@@ -51,6 +54,28 @@ getEdges(){
         {from: 9, to: 12},
         {from: 9, to: 13},
         {from: 9, to: 11},
+        {from: 3, to: 14},
+        {from: 14, to: 16},
+        {from: 0, to: 15},
+
+        /*{from: 0, to: 1},
+        {from: 0, to: 7},
+        {from: 0, to: 14},
+        {from: 7, to: 5},
+        {from: 1, to: 2},
+        {from: 14, to: 9},
+        {from: 2, to: 5},
+        {from: 9, to: 5},
+        {from: 5, to: 3},
+        {from: 5, to: 6},
+        {from: 5, to: 8},
+        {from: 5, to: 10},
+        {from: 5, to: 11},
+        {from: 5, to: 12},
+        {from: 5, to: 15},
+        {from: 5, to: 16},
+        {from: 10, to: 4},
+        {from: 11, to: 13},*/
         
 	]
 	
@@ -111,7 +136,15 @@ ngOnInit(){
 
     var options = {
       edges: {
-        width: 2
+        width:2,
+        
+      color: {
+        color:'blue',
+        highlight:'green',
+        hover: 'yellow',
+        inherit: 'from',
+        opacity:1.0
+    },
         },
       
       layout: {
