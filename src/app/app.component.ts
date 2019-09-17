@@ -27,6 +27,7 @@ var nodes = [
         {id: 14, level:'5', label:'hub', shape: 'image', image:''},
         {id: 15, level:'0', label:'pc', shape: 'image', image:''},
         {id: 16, level:'5', label:'pc', shape: 'image', image:''},
+        
 	]
 	
 	var i = 0;
@@ -56,6 +57,7 @@ getEdges(){
         {from: 3, to: 14},
         {from: 14, to: 16},
         {from: 0, to: 15},
+        
 
         /*{from: 0, to: 1},
         {from: 0, to: 7},
@@ -135,15 +137,25 @@ ngOnInit(){
 
     var options = {
       edges: {
-        width:2,
-        
-      color: {
-        color:'blue',
-        highlight:'green',
+          arrows: 'to',
+
+          color: {
+            color: 'blue',
+            highlight: 'green',
+            },
+
+          font: '12px arial #ff0000',
+
+          scaling:{
+            label: true,
+          },
+
+          shadow: false,
+          smooth: false,
+
     },
-        },
       
-      layout: {
+    layout: {
         hierarchical: {
           direction: 'UD',
           levelSeparation:100,
