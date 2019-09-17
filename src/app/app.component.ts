@@ -141,9 +141,6 @@ ngOnInit(){
       color: {
         color:'blue',
         highlight:'green',
-        hover: 'yellow',
-        inherit: 'from',
-        opacity:1.0
     },
         },
       
