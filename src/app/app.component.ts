@@ -25,7 +25,7 @@ var nodes = [
         {id: 12, level:'2', label:'pc', shape: 'image', image:''},
         {id: 13, level:'4', label:'printer', shape: 'image', image:''},
         {id: 14, level:'5', label:'hub', shape: 'image', image:''},
-        {id: 15, level:'1', label:'pc', shape: 'image', image:''},
+        {id: 15, level:'0', label:'pc', shape: 'image', image:''},
         {id: 16, level:'5', label:'pc', shape: 'image', image:''},
 	]
 	
@@ -50,7 +50,6 @@ getEdges(){
         {from: 2, to: 8},
         {from: 5, to: 9},
         {from: 5, to: 10},
-        {from: 4, to: 8},
         {from: 9, to: 12},
         {from: 9, to: 13},
         {from: 9, to: 11},
