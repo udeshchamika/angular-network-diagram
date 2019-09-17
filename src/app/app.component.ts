@@ -89,31 +89,31 @@ checkIcon(txt){
 	switch(txt) {
 	
 	case 'internet':
-    value = 'https://raw.githubusercontent.com/udeshchamika/images/master/internet.png';
+    value = 'https://res.cloudinary.com/udeshchamika/image/upload/v1568705036/images-master/internet_hgavdt.jpg';
     break;
 	
 	case 'hub':
-    value = 'https://raw.githubusercontent.com/udeshchamika/images/master/hub.png'
+    value = 'https://res.cloudinary.com/udeshchamika/image/upload/v1568705036/images-master/hub_ef3jpr.png'
     break;
 	
 	case 'server':
-    value = 'https://raw.githubusercontent.com/udeshchamika/images/master/server.png'
+    value = 'https://res.cloudinary.com/udeshchamika/image/upload/v1568705036/images-master/server_rgkur6.jpg'
     break;
 	
 	case 'pc':
-    value = 'https://raw.githubusercontent.com/udeshchamika/images/master/pc.png'
+    value = 'https://res.cloudinary.com/udeshchamika/image/upload/v1568705037/images-master/pc_l7f0xq.png'
     break;
 	
 	case 'printer':
-    value = 'https://raw.githubusercontent.com/udeshchamika/images/master/printer.png'
+    value = 'https://res.cloudinary.com/udeshchamika/image/upload/v1568705036/images-master/printer_bxh5r6.png'
     break;
 	
 	case 'router':
-    value = 'https://raw.githubusercontent.com/udeshchamika/images/master/router.png'
+    value = 'https://res.cloudinary.com/udeshchamika/image/upload/v1568705037/images-master/router_k7h9uh.png'
     break;
 	
 	default:
-    value = 'https://raw.githubusercontent.com/udeshchamika/images/master/blank.png'
+    value = 'https://res.cloudinary.com/udeshchamika/image/upload/v1568705036/images-master/blank_uzwuku.png'
 }
 
 return value;
